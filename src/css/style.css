@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-goods {
+  width: 500px;
+  margin-left: auto;
+  margin-top: 5%;
+  margin-right: auto;
+}
+
+.head-goods {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.head-name, .add-product {
+  font-size: 26px;
+}
+
+.add-product {
+  font-weight: 700;
+}
+
+.add-product:hover {
+  font-size: 30px;
+  color: green;
+}
+
+.column-name {
+  font-size: 22px;
+}
+
+.column-name:nth-child(n+2), .price {
+  text-align: center;
+}
+
+.pointers {
+  text-align: center;
+}
+
+.pointer {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.pointer:hover {
+  opacity: 1;
+}
+
+.table-goods {
+  width: 100%;
+  border: 1px solid;
+  padding: 10px;
+}
+
+.table-goods td {
+  padding: 5px 0;
+}
+
+.edit-product {
+  background-image: url("../img/pencil.png");
+}
+
+.delete-product {
+  background-image: url("../img/delete.png");
+}
+
+.popup {
+  margin-top: 50px;
+  width: 350px;
+  border: 1px solid gray;
+  padding: 20px 30px;
+  position: fixed;
+  background-color: #ffffff;
+}
+
+.popup p {
+  padding: 10px 0;
+}
+
+#close-popup, #close-delete {
+  float: right;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/close-default.png");
+  background-position: center;
+  cursor: pointer;
+}
+
+#close-popup:hover, #close-delete:hover {
+  background-image: url("../img/close.png");
+}
+
+.input {
+  font-size: 16px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 10px;
+  height: 35px;
+  width: 100%;
+}
+
+.popup-name:nth-child(n+2) {
+  margin-top: 10px;
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.button {
+  width: 110px;
+  height: 35px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(99, 199, 99);
+  border: rgb(99, 199, 99);
+}
+
+.button:nth-child(n+2):hover {
+  background-color: rgb(221, 221, 221);
+}
+
+.button:first-child {
+  margin-right: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.form-error {
+  position: absolute;
+  border: 1px solid rgb(212, 0, 0);
+  border-radius: 3px;
+  margin-top: 10px;
+  background-color: #ffd5d5;
+  color: rgb(212, 0, 0);
+  padding: 10px;
+}
+
+.form-error::before,
+.form-error::after {
+  content: "";
+  position: absolute;
+  border: 10px solid transparent;
+  border-bottom: 10px solid rgb(212, 0, 0);
+  top: -20px;
+  left: calc(50% - 10px);
+}
+
+.form-error::after {
+  content: "";
+  border-bottom: 10px solid #ffd5d5;
+  top: -19px;
+}
+
+.invalid {
+  border: 1px solid rgb(212, 0, 0);
+}
