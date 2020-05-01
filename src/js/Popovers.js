@@ -71,9 +71,8 @@ export default class Popovers {
         return;
       }
 
-      if (this.inputName.value !== '') {
-        this.inputName.classList.remove('invalid');
-      }
+      this.inputName.classList.remove('invalid');
+      this.hiddenError();
 
       const number = Number(this.inputPrice.value);
       if (number <= 0) {
@@ -90,7 +89,7 @@ export default class Popovers {
     // cancel the input
     this.buttonCancel.addEventListener('click', () => {
       this.popupBlock.classList.add('hidden');
-      this.hidenError();
+      this.hiddenError();
       this.clearInput();
     });
 
@@ -101,16 +100,16 @@ export default class Popovers {
 
     // input the name
     this.inputName.addEventListener('input', () => {
-      this.hidenError();
+      this.hiddenError();
     });
 
     // input the price
     this.inputPrice.addEventListener('input', () => {
-      this.hidenError();
+      this.hiddenError();
     });
   }
 
-  hidenError() {
+  hiddenError() {
     if (!this.formError.classList.contains('hidden')) {
       this.formError.classList.add('hidden');
     }

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 export default class ProductDel {
   init() {
     const deleteBlock = document.createElement('div');
@@ -26,6 +27,7 @@ export default class ProductDel {
     this.buttonDelete.addEventListener('click', () => {
       this.deleteItem.classList.add('hidden');
       callback();
+      console.log('deleted');
     });
 
     // cancel the deleting
